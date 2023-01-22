@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 6px;
+
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 4px;
+            color: rgb(13, 254, 218);
+        }
+
+        .form-control {
+            box-sizing: border-box;
+            width: 300px;
+            padding: 7px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            border-color: #80bdff;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Araba Markaları</h2>
+    </header>
+    <ul id="main">
+        <li><a href="index.html">ANASAYFA</a></li>
+        <li><a href="#">MARKALAR</a>
+            <ul id="main2">
+                <li><a href="mercedes.html">Mercedes</a></li>
+                <li><a href="audi.html">Audi</a></li>
+                <li><a href="bmw.html">BMW</a></li>
+                <li><a href="porsche.html">Porsche</a></li>
+                <li><a href="lamborghini.html">Lamborghini</a></li>
+                <li><a href="volvo.html">Volvo</a></li>
+                <li><a href="ford.html">Ford</a></li>
+            </ul>
+        </li>
+        <li><a href="galeri.html">GALERİ</a></li>
+        <li><a href="iletişim.html">İLETİŞİM</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+        <font size="6">
+            <p>Bize Ulaşın</p>
+        </font>
+        <div id="form1">
+            <div class="form-group">
+                <div class="col-25">
+                    <label for="fullName">Ad Soyad</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="fullName" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="email" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <div class="col-25">
+                        <label for="message">Mesaj</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea name="message" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-25">
+                        <label for="cinsiyet">Cinsiyet</label>
+                    </div>
+                    <div class="col-75">
+                        <select name="cinsiyet" class="form-control">
+                            <option value="Erkek">Erkek</option>
+                            <option value="Kadın">Kadın</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Kaydet" class="btn">
+                </div>
+            </div>
+    </center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>Copyright © EGEHAN SÖZEN</footer>
+</body>
+</html>
