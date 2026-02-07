@@ -1,49 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: darkslategray;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #0f1f2e 0%, #1a3448 45%, #224f5c 100%);
+    color: #ecf4ff;
 }
+
 header {
-    background-color: cadetblue;
+    background: rgba(10, 20, 30, 0.8);
+    backdrop-filter: blur(5px);
     text-align: center;
-    height: 80px;
-    font-size: 25px;
-    color: white;
-    padding: 10px;
-    line-height: 20px;
+    padding: 22px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
+header h2 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+}
+
+ul#main,
 ul#main2 {
     list-style: none;
-    padding-left:0;
-    margin:0;   
+    margin: 0;
+    padding: 0;
 }
-ul#main{
-    list-style: none;
-    padding-left:260px;
-    margin:0;
+
+ul#main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 12px;
+    background: rgba(8, 17, 25, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+ul#main > li {
+    position: relative;
+}
+
 ul li a {
     display: block;
-    width: 240px;
-    height: 40px;
-    background-color: rgb(0, 144, 254);
-    line-height: 40px;
+    min-width: 180px;
+    padding: 11px 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2aa6ff, #1676d3);
+    color: #eef7ff;
+    font-weight: 600;
     text-align: center;
-    color: aliceblue;
     text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-ul li a:hover{
-    background-color: rgb(0, 95, 168);
+
+ul li a:hover {
+    background: linear-gradient(135deg, #48b9ff, #2682df);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
 }
-ul#main li:hover ul{
-    display: block;
-}
+
 ul#main li ul {
     display: none;
     position: absolute;
     left: 0;
-    top: 40px;
+    top: calc(100% + 8px);
+    z-index: 20;
+    background: rgba(7, 18, 30, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 220px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
-ul#main li {
-    float: left;
-    position: relative;
-    width: 240px;
+
+ul#main li:hover ul {
+    display: block;
+}
+
+ul#main2 li {
+    margin-bottom: 8px;
+}
+
+ul#main2 li:last-child {
+    margin-bottom: 0;
+}
+
+center {
+    display: block;
+    width: min(1100px, 92%);
+    margin: 36px auto 28px;
+    padding: 26px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+center img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+font p,
+center p {
+    color: #e4edf8 !important;
+    line-height: 1.7;
+    font-size: 1.04rem;
+    margin: 16px auto;
+    max-width: 90ch;
+    text-align: left;
+}
+
+strong p,
+center strong p {
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 18px 10px 24px;
+    color: rgba(237, 244, 255, 0.82);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(8, 15, 23, 0.6);
+}
+
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 1.6rem;
+    }
+
+    ul li a {
+        min-width: 150px;
+        font-size: 0.92rem;
+    }
+
+    center {
+        padding: 16px;
+    }
+
+    font p,
+    center p {
+        font-size: 0.98rem;
+    }
 }
